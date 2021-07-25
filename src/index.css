@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(97, 97, 97, 0.8);
+  height: 2rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header > div {
+  margin-left: auto;
+}
+
+.github {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding-top: 3px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.github:hover {
+  opacity: 0.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  overflow: hidden;
+}
+
+.map {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.marker {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: red;
+  border: 0.1px solid black;
+}
+
+.marker:hover {
+  color: yellow;
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 35px;
+  right: 12px;
+  z-index: 100;
+  color: white;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+.event-info {
+  max-width: 300px;
+  padding: 5px 10px 5px 5px;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid blue;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.event-info > div {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.event-info > div > span:first-child {
+  border-right: 2px solid #777;
+  min-width: 50px;
+  margin-right: 1rem;
+}
+
+.spinner {
+  margin: 15rem auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 10px solid #999;
+  border-top: 10px solid #333;
+  animation: spin 1000ms infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
