@@ -26,13 +26,14 @@ const MyMap = ({ events }) => {
             return (
               <Overlay key={e.id} anchor={[lat, lng]}>
                 <Marker
+                  active={info?.id === e.id}
                   onClick={() => setInfo({ id, title, date, lat, lng })}
                 />
               </Overlay>
             );
           })}
       </Map>
-      {show && info && <Info info={info} onClick={() => setShow(!show)} />}
+      {show && info && <Info info={info} onClick={(e) => setShow(!show)} />}
     </div>
   );
 };

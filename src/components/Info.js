@@ -1,6 +1,6 @@
 const Info = ({ info, onClick }) => {
   return (
-    <>
+    <div className='info-container'>
       <div className="close-button" onClick={onClick}>
         &#215;
       </div>
@@ -26,7 +26,7 @@ const Info = ({ info, onClick }) => {
           <span>{info.lng}</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Info;

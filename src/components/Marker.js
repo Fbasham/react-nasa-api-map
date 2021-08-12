@@ -1,8 +1,9 @@
 import { RiFireFill } from "react-icons/ri";
 
-const Marker = ({ onClick }) => {
+const Marker = ({ active, onClick }) => {
+  console.log()
   return (
-    <div className="marker" onClick={onClick}>
+    <div className={`marker ${Boolean(active) ? 'active' : ''}`} onClick={onClick}>
       <RiFireFill />
     </div>
   );

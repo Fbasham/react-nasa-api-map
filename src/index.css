@@ -64,6 +64,10 @@ body {
   color: yellow;
 }
 
+.active{
+  color: yellow;
+}
+
 .close-button {
   cursor: pointer;
   position: absolute;
